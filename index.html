@@ -6,15 +6,30 @@
 </head>
 <body>
   <script>
-    function lastLetter(string) {
-      stringLength = string.length;
-      lastChar = string.charAt(stringLength-1)
-     
-      
-      return lastChar;
-    }
+    function computerPlay() {
+        let randomNumber = Math.random()*3;
+        alert(randomNumber);
+        let computerHand;
+        
 
-  console.log(lastLetter("HELP"))
+        if (randomNumber<=1) {
+
+            computerHand = "Rock";
+
+        } else if(randomNumber <=2) {
+
+            computerHand = "Scissor";
+
+        } else {
+            computerHand = "Paper";
+        }
+    
+    alert(computerHand);
+    return computerHand;
+    }
+    
+
+  console.log(computerPlay());
   </script>
 </body>
 </html>
