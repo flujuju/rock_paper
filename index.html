@@ -27,9 +27,73 @@
     alert(computerHand);
     return computerHand;
     }
-    
 
-  console.log(computerPlay());
+    function playRound(playerSelection, computerSelection) {
+
+        let result;
+        if (playerSelection.toUpperCase() == "ROCK") {
+
+            switch (computerSelection) {
+                case "Rock":
+                    result=0;
+                    break;
+                
+                case "Paper":
+                    result=-1;
+                    break;
+                
+                case "Scissor":
+                    result=1;
+                    break;
+                default:
+                    alert("There must be a problem");
+            }
+
+        } else if (playerSelection.toUpperCase()=="SCISSOR") {
+            
+            switch (computerSelection) {
+                case "Rock":
+                    result=-1;
+                    break;
+                
+                case "Paper":
+                    result=1;
+                    break;
+                
+                case "Scissor":
+                    result=0;
+                    break;
+                default:
+                    alert("There must be a problem");
+            }
+
+        } else if (playerSelection.toUpperCase()="PAPER") {
+
+            switch (computerSelection) {
+                case "Rock":
+                    result=1;
+                    break;
+                
+                case "Paper":
+                    result=0;
+                    break;
+                
+                case "Scissor":
+                    result=-1;
+                    break;
+                default:
+                    alert("There must be a problem");
+            }
+        } else {
+            alert("The player selection must be invalid");
+        }
+
+        return result;
+    }
+    
+    const playerSelection = "rock"
+    const computerSelection = computerPlay()
+  console.log(playRound(playerSelection, computerSelection));
   </script>
 </body>
 </html>
